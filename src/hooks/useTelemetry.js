@@ -32,7 +32,6 @@ export function useTelemetry() {
   const demoIntervalRef = useRef(null);
 
   // Log usage to Firebase
-  const logUsage = useCallback((sessionMinutes) => {
     if (DEMO_MODE) return;
     const today = new Date().toISOString().split("T")[0];
     push(ref(db, `dispositivo/historial/${today}`), {
@@ -126,7 +125,6 @@ export function useTelemetry() {
     // Real Firebase mode
     setLoading(true);
     const telRef = ref(db, "dispositivo/telemetria");
-    const pingRef = ref(db, "dispositivo/ping");
 
     const unsub = onValue(
       telRef,
