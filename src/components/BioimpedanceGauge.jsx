@@ -21,7 +21,6 @@ export default function BioimpedanceGauge({ value, fatigue }) {
 
   // SVG arc math
   const cx = 80, cy = 75, r = 58;
-  const startAngle = 210, endAngle = 330;
   // Arc from -210deg to 30deg (240 degree sweep)
   const sweepDeg = 240;
   const filled = clampedRatio * sweepDeg;

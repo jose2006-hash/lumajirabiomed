@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { ref, onValue, set, push } from "firebase/database";
+import { ref, onValue, set } from "firebase/database";
 import { db } from "../lib/firebase";
 import {
   movingAverageFilter,
